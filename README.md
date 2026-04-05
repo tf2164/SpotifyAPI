@@ -6,6 +6,7 @@ This project uses the Spotify API to display user data.
 It currently shows:
 - Top 5 Tracks
 - Top 5 Artists
+- Top 5 Recommended songs
 
 ---
 
@@ -14,16 +15,16 @@ It currently shows:
 - Displays:
   - Top 5 Tracks  
   - Top 5 Artists  
-- Navigation between pages:
- 
-- Each navigation triggers a new API call
+- Navigation between views:
+ - Top 5 recommended songs with button to create playlist
 
 ---
 
 ## How It Works
-- Two endpoints are used:
+- Endpoints used:
   - `/me/top/tracks`
   - `/me/top/artists`
+  - `/me/top/playlists`
 - When a page loads, a GET request is made to the corresponding endpoint
 - Clicking navigation links loads the other dataset and makes a new request
 
