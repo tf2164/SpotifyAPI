@@ -119,6 +119,8 @@ code {
 
 .hero {
   position: relative;
+  width: 100%;
+  align-self: stretch;
 
   .base,
   .framework,
@@ -324,6 +326,16 @@ code {
   }
 }
 
+.top-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 48px 24px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 /* Layout */
 .app-container {
   width: 100%;
@@ -355,6 +367,48 @@ code {
 
 .section + .section {
   border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#playlist-view {
+  grid-column: 1 / -1;
+  padding: 168px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 4px 8px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.back-arrow:hover {
+  opacity: 1;
+}
+
+.playlist-confirm-button {
+  background: #0f1118;
+  color: #cee24b;
+  border: 2px solid rgba(206, 226, 75, 0.45);
+  font-weight: 700;
+}
+
+.playlist-confirm-button:hover {
+  border-color: rgba(206, 226, 75, 0.85);
+}
+
+.playlist-confirm-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 /* Headers */
