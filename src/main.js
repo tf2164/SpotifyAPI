@@ -163,12 +163,8 @@ function isScopeError(error) {
   return error?.status === 401 || error?.status === 403
 }
 
-const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID
-const configuredRedirectUri = import.meta.env.VITE_SPOTIFY_REDIRECT_URI
-
-if (!clientId) {
-  throw new Error('Missing VITE_SPOTIFY_CLIENT_ID. Add it to your .env file.')
-}
+const clientId = 'c2f50c92784746e387cb233c3d557b2c'
+const configuredRedirectUri = 'http://127.0.0.1:5173/'
 
 const redirectUri = configuredRedirectUri ?? `${window.location.origin}${window.location.pathname}`
 let storedAccessToken = null
