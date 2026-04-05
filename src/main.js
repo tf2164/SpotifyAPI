@@ -8,7 +8,7 @@ document.querySelector('#app').innerHTML = `
   <div class="hero">
     <nav class="top-nav">
       <a style="text-decoration: none;" class="wrapped-button" href="https://developer.spotify.com/documentation/web-api/quick-start/" target="_blank" rel="noopener noreferrer">Quick Start Guide</a>
-     <button type="button" class="wrapped-button" onclick="window.location.href='http://127.0.0.1:5173/'"> Login with Spotify </button>
+     <button type="button" class="wrapped-button" onclick="window.location.href='https://spotifyapi-ctdream.netlify.app/'"> Login with Spotify </button>
       </nav>
     <img src="${heroImg}" class="base" width="170" height="179">
 
@@ -164,7 +164,7 @@ function isScopeError(error) {
 }
 
 const clientId = 'c2f50c92784746e387cb233c3d557b2c'
-const configuredRedirectUri = 'http://127.0.0.1:5173/'
+const configuredRedirectUri = 'https://spotifyapi-ctdream.netlify.app/'
 
 const redirectUri = configuredRedirectUri ?? `${window.location.origin}${window.location.pathname}`
 let storedAccessToken = null
